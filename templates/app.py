@@ -5,6 +5,10 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('index.html')
+    
+@app.route('/home')
+def home_page():  # changed name here
+    return render_template('home.html')
 
 @app.route('/programs')
 def programs():
